@@ -7,15 +7,20 @@
  */
 
 import React from 'react';
-import {StyleSheet, SafeAreaView, View} from 'react-native';
+import {StyleSheet, StatusBar} from 'react-native';
 
-import HomeScreen from './src/screens/HomeScreen';
+//Navigation
+import {NavigationContainer} from '@react-navigation/native';
+
+//Router
+import Router from './src/routes';
 
 const App = () => {
   return (
-    <SafeAreaView>
-        <HomeScreen />
-    </SafeAreaView>
+    <NavigationContainer>
+      <StatusBar barStyle="dark-content" />
+      <Router />
+    </NavigationContainer>
   );
 };
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import {StyleSheet, Text, View} from 'react-native';
+import {StyleSheet, SafeAreaView, View} from 'react-native';
 
 import Post from '../../components/Post';
 import Feed from '../../components/Feed';
@@ -19,9 +19,9 @@ const HomeScreen = () => {
   };
 
   return (
-    <View>
+    <SafeAreaView>
       <Feed />
-    </View>
+    </SafeAreaView>
   );
 };
 

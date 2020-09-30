@@ -6,6 +6,7 @@ import Stories from '../Stories';
 const Feed = () => {
   const data = [
     {
+      id: 1,
       user: {
         imageUri:
           'https://cdn.jpegmini.com/user/images/slider_puffin_jpegmini_mobile.jpg',
@@ -18,6 +19,7 @@ const Feed = () => {
       postedAt: '6 min ago',
     },
     {
+      id: 2,
       user: {
         imageUri:
           'https://cdn.jpegmini.com/user/images/slider_puffin_jpegmini_mobile.jpg',
@@ -30,6 +32,7 @@ const Feed = () => {
       postedAt: '6 min ago',
     },
     {
+      id: 3,
       user: {
         imageUri:
           'https://cdn.jpegmini.com/user/images/slider_puffin_jpegmini_mobile.jpg',
@@ -46,7 +49,7 @@ const Feed = () => {
   return (
     <View style={styles.container}>
       <FlatList
-        keyExtractor={(item) => item.imageUri}
+        keyExtractor={(item) => item.id.toString()}
         data={data}
         renderItem={({item}) => <Post post={item} />}
         ListHeaderComponent={<Stories />}
